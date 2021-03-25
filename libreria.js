@@ -10,6 +10,15 @@ function realizarPeticion() {
     console.log(opcion.value)
     getByCaracter(opcion.value)
         .then(resHTTP => resHTTP.json())
-        .then(resJSON => console.log(resJSON))
+        .then(resJSON => /*let personaje = resJSON.result
+            for (let i = 0; i < personaje.length; i++) {
+                let nombre = personaje[i].name
+                let genero = personaje[i].gender
+                let especie = personaje[i].species
+                resultado.innerHTML += `<tr>
+                <td>${nombre}</td>
+                <td>${genero}</td>
+                <td>${especie}</td>
+        </tr>`*/console.log(resJSON))
 
 }
