@@ -3,8 +3,22 @@ let opcion = document.getElementById('caracter')
 let solicitud = document.getElementById('peticion')
 
 const resultado = document.getElementById('resultados')
-for (let i = 0; i < 671; i++){
-    opcion.innerHTML += [`<option value="${i+1}">${i+1}</option>`]
+for (let i = 0; i < 671; i++) {
+    
+}
+
+opcion.addEventListener('focus', getName)
+function getName() {
+    for (let i = 0; i < 200; i++) {
+        getByCaracter(i+1)
+            .then(resHTTP => resHTTP.json())
+            .then(resJSON => {
+                let nombre = resJSON.name
+                opcion.innerHTML += [`<option value="${i + 1}">${(nombre)}</option>`]
+            })
+
+    }
+
 }
 
 solicitud.addEventListener('click', realizarPeticion)
@@ -21,14 +35,16 @@ function realizarPeticion() {
             let especie = personaje.species
             let imagen = personaje.image
             let locacion = personaje.location.name
-            
-            
+            let origen = personaje.origin.name
+
+
             resultado.innerHTML += `<tr>
                 <td><img src=${imagen} width="100" height="100"></td>
                 <td>${nombre}</td>
                 <td>${genero}</td>
                 <td>${especie}</td>
                 <td>${locacion}</td>
+                <td>${origen}</td>
                 
         </tr>`
         })

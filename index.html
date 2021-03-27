@@ -9,43 +9,50 @@
 </head>
 
 <body>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
-        crossorigin="anonymous"></script>
-    <div id="titulo">
-        <h3 class="display-6">Informacion de personajes</h3>
+    <div class="p-3 mb-2 bg-dark text-white" width="800" height="800" >
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+            crossorigin="anonymous"></script>
+        <div id="titulo">
+            <h3 class="display-6">Informacion de personajes</h3>
+            <p>Esta api muestra informacion de los personajes de la serie Rick and Morty de la pagna web https://rickandmortyapi.com/ </a></p>
+        </div>
+        <label for="caracter">Seleccione Personaje</label>
+
+        <select id="caracter">
+
+        </select>
+        <input type="button" value="Buscar" id="peticion">
+        <table class="table table-dark table-striped">
+            <thead>
+                <th scope="Imagen">Imagen</th>
+                <th scope="Nombre">Nombre</th>
+                <th scope="Genero">Genero</th>
+                <th scope="Especie">Especie</th>
+                <th scope="Locacion">Locacion</th>
+                <th scope="Origen">Origen</th>
+            </thead>
+            <tbody id="resultados">
+
+            </tbody>
+
+        </table>
+
+        <script type="module" src="./libreria.js">
+
+        </script>
     </div>
-    <label for="caracter">Seleccione Numero</label>
-
-    <select id="caracter">
-
-    </select>
-    <input type="button" value="Buscar" id="peticion">
-    <table class="table table-dark table-striped">
-        <thead>
-            <th scope="Imagen">Imagen</th>
-            <th scope="Nombre">Nombre</th>
-            <th scope="Genero">Genero</th>
-            <th scope="Especie">Especie</th>
-            <th scope="Locacion">Locacion</th>
-        </thead>
-        <tbody id="resultados">
-
-        </tbody>
-
-    </table>
-
-    <script type="module" src="./libreria.js">
-
-    </script>
 </body>
+<footer>
+
+</footer>
 
 </html>

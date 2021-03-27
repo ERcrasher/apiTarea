@@ -5,8 +5,8 @@ const path = require('path')
 let ventana
 function createWindow(){
     ventana = new BrowserWindow({
-        width : 500,
-        height : 500,
+        width : 800,
+        height : 800,
         webPreferences: {
             preload: path.join(app.getAppPath(), 'preload.js')
         }
